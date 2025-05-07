@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your PATHS</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="tabs">
+        <img src="logo.svg" class="logo">
+        <input type="radio" id="welcome" name="tabs" checked>
+        <label class="tab-button" for="welcome">Welcome</label>
+        <div class="content">
+            <div class="helping-hands">
+                <div class="purple-box">
+                    <h2>A helping hand for those in need</h2>
+                    <p>Your PATHS is a Phoenix-based organization dedicated to helping individuals whose lives have been impacted by domestic trafficking and commercial sexual exploitation. We're here to help you overcome whatever obstacles stand in the way of the bright future that you deserve!</p>
+                    <p>The hardest part of any journey is taking the first step. Simply by reaching out you've started to take back control of your life. We know how frightening it can be—the volunteers and staff at Your PATHS have all taken a similar journey as you have, and we're here to help you make your own.</p>
+                </div>
+            </div>
+            <div class="where-to-start">
+                <div class="purple-box">
+                    <h2>Where do I start?</h2>
+                    <p>You can submit an application and a member of our team will get in contact with you to walk you through the next steps.</p>
+                    <form method="post" action="/client">
+                        <input name="first_name" type="text" placeholder="First name" size="15"><br>
+                        <input name="last_name" type="text" placeholder="Last name" size="15"><br>
+                        <input name="email_address" type="text" placeholder="Email address" size="20"><br>
+                        <input name="phone_number" type="text" placeholder="Phone number" size="10"><br>
+                        <select name="pronouns" id="pronouns">
+                            <option value="he">He/him</option>
+                            <option value="she">She/her</option>
+                            <option value="they">They/Them</option>
+                        </select><br>
+                        <input type="submit" value="Submit">
+                    </form>
+    
+                    <p>Always remember: you are NOT alone! Many of us have made this journey before you, and many will make it after!</p>
+                </div>
+            </div>
+        </div>
+
+        <input type="radio" id="info" name="tabs">
+        <label class="tab-button" for="info">About Us</label>
+        <div class="content">
+            <div class="about-us">
+                <div>
+                    <p class="purple-box">Your PATHS professionals help our members with housing, mental health, education, and potential careers.  Staff members encourages clients to become empowered to take a new direction towards a positive path.</p>
+                    <div class="grid">
+                        <div class="careers">
+                            <h1>Housing</h1>
+                            <p>We can help find you somewhere safe to stay regardless of your financial situation.</p>
+                        </div>
+                        <div class="education">
+                            <h1>Mental Health</h1>
+                            <p>It's essential to take care of your mental health just as much as your physical health. We can connect you with local mental health professionals that specialize in treating sexual trauma.</p>    
+                        </div>
+                        <div class="housing">
+                            <h1>Education</h1>
+                            <p>Feeling left behind in today's economy? It's never too late to seek an education! We can help you find a school that suits your talents and interests.</p>    
+                        </div>
+                        <div class="mental-health">
+                            <h1>Careers</h1>
+                            <p>Looking for a job? We can help you start a new career on a path that brings you fulfillment and opportunity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <input type="radio" id="contribute" name="tabs">
+        <label class="tab-button" for="contribute">Ways to Support</label>
+        <div class="content">
+            <div class="ways-to-support">
+                <div class="purple-box">
+                    <p>We are always looking for volunteers! If you're interested, please fill out the following form and a representative will get in contact with you.</p>
+                    <form method="post" action="/volunteer">
+                        <input name="first_name" type="text" placeholder="First name" size="15"><br>
+                        <input name="last_name" type="text" placeholder="Last name" size="15"><br>
+                        <input name="email_address" type="text" placeholder="Email address" size="20"><br>
+                        <input name="phone_number" type="text" placeholder="Phone number" size="10"><br>
+                        <select name="pronouns" id="pronouns">
+                            <option value="he">He/him</option>
+                            <option value="she">She/her</option>
+                            <option value="they">They/Them</option>
+                        </select><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
