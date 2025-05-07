@@ -103,10 +103,19 @@ select:hover {
 }
 
 .logo {
-    width: 20vh;
-    left: 0;
-    height: auto;
+    left: 0.5vh;
+    top: 0.5vh;
     position: absolute;
+    color: var(--darkblue);
+    font-size: 1.4em;
+    font-weight:500;
+    letter-spacing: 0.07em;
+    font-family: "Fredoka", sans-serif;
+}
+
+.logo img {
+    height: 5vh;
+    vertical-align: middle;
 }
 
 .content h2 {
