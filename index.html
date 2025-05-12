@@ -13,8 +13,8 @@
             <img src="logo.png">
             YourPATHS
         </div>
-        <input type="radio" id="welcome" name="tabs" checked>
-        <label class="tab-button" for="welcome">Welcome</label>
+        <input type="radio" id="tab1" name="tabs" onclick="tab(1)">
+        <label class="tab-button" for="tab1">Welcome</label>
         <div class="content">
             <div class="helping-hands">
                 <div class="purple-box">
@@ -45,8 +45,8 @@
             </div>
         </div>
 
-        <input type="radio" id="info" name="tabs">
-        <label class="tab-button" for="info">About Us</label>
+        <input type="radio" id="tab2" name="tabs" onclick="tab(2)">
+        <label class="tab-button" for="tab2">About Us</label>
         <div class="content">
             <div class="about-us">
                 <div>
@@ -73,8 +73,8 @@
             </div>
         </div>
         
-        <input type="radio" id="contribute" name="tabs">
-        <label class="tab-button" for="contribute">Ways to Support</label>
+        <input type="radio" id="tab3" name="tabs" onclick="tab(3)" >
+        <label class="tab-button" for="tab3">Ways to Support</label>
         <div class="content">
             <div class="ways-to-support">
                 <div class="purple-box">
@@ -95,4 +95,18 @@
             </div>
         </div>
     </div>
+    <script>
+        function tab(number) {
+            history.pushState(null, 'Tab ' + number, '?tab=' + number)
+        }
+
+        let a = window.location.href.split('=');
+        let end = a[a.length - 1];
+        let tabN = document.getElementById('tab' + end);
+        if (tabN == null) {
+            tab(1);
+            tabN = document.getElementById('tab1');
+        }
+        tabN.checked = true;
+    </script>
 </body>
