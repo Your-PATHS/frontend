@@ -49,11 +49,11 @@
                 <div class="purple-box">
                     <h2>Where do I start?</h2>
                     <p>You can submit an application and a member of our team will get in contact with you to walk you through the next steps.</p>
-                    <form method="post" name="client" action="https://formspree.io/f/mvgrrbkg" onsubmit="handleSubmit(event, this)" class="contact-form" id="application-form">
+                    <form method="post" name="client" onsubmit="handleSubmit(event, this, 'https://formspree.io/f/mvgrrbkg')" class="contact-form" id="application-form">
                         <fieldset>
                             <legend>Contact Information</legend>
-                            <input name="first_name" type="text" placeholder="First name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+" title="Please enter a valid first name">
-                            <input name="last_name" type="text" placeholder="Last name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+" title="Please enter a valid last name">
+                            <input name="first_name" type="text" placeholder="First name" required minlength="2" maxlength="50" pattern="[\p{L}\s\-]+" title="Please enter a valid first name">
+                            <input name="last_name" type="text" placeholder="Last name" required minlength="2" maxlength="50" pattern="[\p{L}\s\-]+" title="Please enter a valid last name">
                             <input name="email" type="email" placeholder="Email address" required title="Please enter a valid email address">
                             <input name="phone_number" type="tel" placeholder="Phone number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
                             <select name="pronouns" required title="Please select your pronouns">
@@ -105,11 +105,11 @@
             <div class="ways-to-support">
                 <div class="purple-box">
                     <p>We are always looking for volunteers! If you're interested, please fill out the following form and a representative will get in contact with you.</p>
-                    <form method="post" name="volunteer" action="https://formspree.io/f/mwpbbnlv" onsubmit="handleSubmit(event, this)" class="contact-form">
+                    <form method="post" name="volunteer" onsubmit="handleSubmit(event, this, 'https://formspree.io/f/mwpbbnlv')" class="contact-form">
                         <fieldset>
                             <legend>Volunteer Information</legend>
-                            <input name="first_name" type="text" placeholder="First name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+" title="Please enter a valid first name">
-                            <input name="last_name" type="text" placeholder="Last name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+" title="Please enter a valid last name">
+                            <input name="first_name" type="text" placeholder="First name" required minlength="2" maxlength="50" pattern="[\p{L}\s\-]+" title="Please enter a valid first name">
+                            <input name="last_name" type="text" placeholder="Last name" required minlength="2" maxlength="50" pattern="[\p{L}\s\-]+" title="Please enter a valid last name">
                             <input name="email" type="email" placeholder="Email address" required title="Please enter a valid email address">
                             <input name="phone_number" type="tel" placeholder="Phone number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
                             <select name="pronouns" required title="Please select your pronouns">
@@ -139,11 +139,11 @@
         }
         tabN.checked = true;
 
-        function handleSubmit(event, form) {
+        function handleSubmit(event, form, url) {
             event.preventDefault();
             
             const formData = new FormData(form);
-            fetch('/', {
+            fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(formData).toString()
