@@ -17,7 +17,7 @@
     --font-family-base: "Open Sans", sans-serif;
     --font-family-heading: "Fredoka", sans-serif;
     --font-size-base: 1.6em;
-    --font-size-small: 1.3em;
+    --font-size-small: 1.0em;
 }
 
 /* Base Styles */
@@ -246,6 +246,10 @@ legend {
     padding: var(--spacing-unit);
     border-radius: 0.4em;
     min-height: 20vh;
+}
+
+p {
+    margin-bottom: 1em;
 }
 
 .grid h1, .grid p {

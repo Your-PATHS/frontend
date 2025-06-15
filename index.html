@@ -15,6 +15,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preload" as="image" href="helping-hands.avif">
+    <link rel="preload" as="image" href="where-to-start.avif">
+    <link rel="preload" as="image" href="about-us.avif">
+    <link rel="preload" as="image" href="ways-to-support.avif">
+    <link rel="preload" as="image" href="careers.avif">
+    <link rel="preload" as="image" href="education.avif">
+    <link rel="preload" as="image" href="housing.avif">
+    <link rel="preload" as="image" href="mental-health.avif">
 </head>
 <body>
     <div class="tabs">
@@ -141,9 +149,7 @@
                 body: new URLSearchParams(formData).toString()
             })
             .then(() => {
-                // Clear the form
                 form.reset();
-                // Show success message
                 alert('Thank you for your submission! We will be in touch soon.');
             })
             .catch(error => {
