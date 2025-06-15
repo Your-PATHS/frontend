@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your PATHS - A Phoenix-based organization helping individuals impacted by domestic trafficking and commercial sexual exploitation">
+    <meta name="keywords" content="domestic trafficking, sexual exploitation, Phoenix, support, help, resources">
+    <meta name="author" content="Your PATHS">
+    <meta property="og:title" content="Your PATHS - Support and Resources">
+    <meta property="og:description" content="A helping hand for those in need. Your PATHS provides support for individuals impacted by domestic trafficking and commercial sexual exploitation.">
+    <meta property="og:type" content="website">
     <title>Your PATHS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,8 +19,8 @@
 <body>
     <div class="tabs">
         <div class="logo">
-            <img src="logo.png">
-            YourPATHS
+            <img src="logo.png" alt="Your PATHS logo">
+            <span class="logo-text">YourPATHS</span>
         </div>
         <input type="radio" id="tab1" name="tabs" onclick="tab(1)">
         <label class="tab-button" for="tab1">Welcome</label>
@@ -23,22 +31,31 @@
                     <p>Your PATHS is a Phoenix-based organization dedicated to helping individuals whose lives have been impacted by domestic trafficking and commercial sexual exploitation. We're here to help you overcome whatever obstacles stand in the way of the bright future that you deserve!</p>
                     <p>The hardest part of any journey is taking the first step. Simply by reaching out you've started to take back control of your life. We know how frightening it can be—the volunteers and staff at Your PATHS have all taken a similar journey as you have, and we're here to help you make your own.</p>
                 </div>
+                <a href="#application-form" class="scroll-arrow" aria-label="Scroll to application form">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5L12 19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
             <div class="where-to-start">
                 <div class="purple-box">
                     <h2>Where do I start?</h2>
                     <p>You can submit an application and a member of our team will get in contact with you to walk you through the next steps.</p>
-                    <form method="post" name="client" netlify data-netlify="true" onsubmit="handleSubmit(event, this)">
-                        <input name="first_name" type="text" placeholder="First name" size="15"><br>
-                        <input name="last_name" type="text" placeholder="Last name" size="15"><br>
-                        <input name="email_address" type="text" placeholder="Email address" size="20"><br>
-                        <input name="phone_number" type="text" placeholder="Phone number" size="10"><br>
-                        <select name="pronouns" id="pronouns">
-                            <option value="he">He/him</option>
-                            <option value="she">She/her</option>
-                            <option value="they">They/Them</option>
-                        </select><br>
-                        <input type="submit" value="Submit">
+                    <form method="post" name="client" netlify data-netlify="true" onsubmit="handleSubmit(event, this)" class="contact-form" id="application-form">
+                        <fieldset>
+                            <legend>Contact Information</legend>
+                            <input name="first_name" type="text" placeholder="First name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+" title="Please enter a valid first name">
+                            <input name="last_name" type="text" placeholder="Last name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+" title="Please enter a valid last name">
+                            <input name="email" type="email" placeholder="Email address" required title="Please enter a valid email address">
+                            <input name="phone_number" type="tel" placeholder="Phone number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+                            <select name="pronouns" required title="Please select your pronouns">
+                                <option value="">Please select pronouns</option>
+                                <option value="he">He/him</option>
+                                <option value="she">She/her</option>
+                                <option value="they">They/Them</option>
+                            </select>
+                            <button type="submit" class="submit-button">Submit</button>
+                        </fieldset>
                     </form>
     
                     <p>Always remember: you are NOT alone! Many of us have made this journey before you, and many will make it after!</p>
@@ -80,17 +97,21 @@
             <div class="ways-to-support">
                 <div class="purple-box">
                     <p>We are always looking for volunteers! If you're interested, please fill out the following form and a representative will get in contact with you.</p>
-                    <form method="post" name="volunteer" netlify data-netlify="true" onsubmit="handleSubmit(event, this)">
-                        <input name="first_name" type="text" placeholder="First name" size="15"><br>
-                        <input name="last_name" type="text" placeholder="Last name" size="15"><br>
-                        <input name="email_address" type="text" placeholder="Email address" size="20"><br>
-                        <input name="phone_number" type="text" placeholder="Phone number" size="10"><br>
-                        <select name="pronouns" id="pronouns">
-                            <option value="he">He/him</option>
-                            <option value="she">She/her</option>
-                            <option value="they">They/Them</option>
-                        </select><br>
-                        <input type="submit" value="Submit">
+                    <form method="post" name="volunteer" netlify data-netlify="true" onsubmit="handleSubmit(event, this)" class="contact-form">
+                        <fieldset>
+                            <legend>Volunteer Information</legend>
+                            <input name="first_name" type="text" placeholder="First name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+" title="Please enter a valid first name">
+                            <input name="last_name" type="text" placeholder="Last name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+" title="Please enter a valid last name">
+                            <input name="email" type="email" placeholder="Email address" required title="Please enter a valid email address">
+                            <input name="phone_number" type="tel" placeholder="Phone number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+                            <select name="pronouns" required title="Please select your pronouns">
+                                <option value="">Please select pronouns</option>
+                                <option value="he">He/him</option>
+                                <option value="she">She/her</option>
+                                <option value="they">They/Them</option>
+                            </select>
+                            <button type="submit" class="submit-button">Submit</button>
+                        </fieldset>
                     </form>
                 </div>
             </div>
